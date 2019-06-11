@@ -19,6 +19,7 @@
         <th>Category</th>
     </tr>
 
+<!-- added from studio - displays category name instead of type -->
     <tr th:each="cheese : ${cheeses}">
         <td th:text="${cheese.name}"></td>
         <td th:text="${cheese.description}"></td>

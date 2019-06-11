@@ -25,6 +25,7 @@ public class Cheese {
     @Size(min=1, message = "Stop cheesing me. Add a description.")
     private String description;
 
+//added from studio
     @ManyToOne
     private Category category;
 

@@ -19,6 +19,8 @@
     </div>
 
     <div class="form-group">
+<!-- 24 thru 29 added to display loops over
+the list of categories properly in form -->
         <label th:for="type">Type</label>
         <select name="categoryId">
             <option th:each="category : ${categories}"

@@ -48,6 +48,7 @@ public class CheeseController {
     }
 
     @RequestMapping(value = "add", method = RequestMethod.POST)
+//added from studio - creates a new cheese
     public String processAddCheeseForm(@ModelAttribute  @Valid Cheese newCheese,
                                        Errors errors, @RequestParam int categoryId, Model model) {
 
@@ -57,7 +58,9 @@ public class CheeseController {
             return "cheese/add";
         }
 
+//added from studio - allows Category Object to Correspond to this ID
         Category cat = categoryDao.findOne(categoryId);
+//added from studio - fetch a single category object matching CategoryId and setting it
         newCheese.setCategory(cat);
         cheeseDao.save(newCheese);
         return "redirect:";
@@ -71,6 +74,7 @@ public class CheeseController {
     }
 
     @RequestMapping(value = "remove", method = RequestMethod.POST)
+//added from studio - to delete cheeses from database
     public String processRemoveCheeseForm(@RequestParam int[] ids) {
 
         for (int id : ids) {
