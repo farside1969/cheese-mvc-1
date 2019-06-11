@@ -9,6 +9,8 @@
 <ul>
     <li th:each="category : ${categories}">
         <a th:href="'/cheese/category?id=' + ${category.id}" th:text="${category.name}"></a>
+<!-- added a counter -->
+        <span class="badge badge-secondary" th:text="${category.cheeses.size()}"></span>
     </li>
 </ul>
 

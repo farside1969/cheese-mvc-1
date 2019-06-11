@@ -22,7 +22,7 @@ public class Cheese {
     private String name;
 
     @NotNull
-    @Size(min=1, message = "Description must not be empty")
+    @Size(min=1, message = "Stop cheesing me. Add a description.")
     private String description;
 
     @ManyToOne
