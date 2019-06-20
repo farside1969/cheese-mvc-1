@@ -10,11 +10,11 @@ import javax.validation.constraints.Size;
 public class LoginForm {
 
     @NotNull
-    @Pattern(regexp = "[a-zA-Z][a-zA-Z0-9_-]{4,11}", message = "Usernames must be between 4 and 11 characters, and may contain only letters and numbers")
+    @Pattern(regexp = "[a-zA-Z][a-zA-Z0-9_-]{3,30}", message = "Usernames must be between 3 and 30 characters, and may contain only letters and numbers")
     private String username;
 
     @NotNull
-    @Pattern(regexp = "(\\S){4,20}", message = "Password must have 4-20 characters")
+    @Pattern(regexp = "(\\S){3,20}", message = "Password must have 3-20 characters")
     private String password;
 
     public LoginForm() {}
